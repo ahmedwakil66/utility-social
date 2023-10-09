@@ -7,6 +7,7 @@ import { useQuery } from "@apollo/client";
 import { GET_POST, GET_PUBLIC_POSTS_LIST } from "../queries/posts";
 import FeedPostSkeleton from "../components/utils/FeedPostSkeleton";
 import ErrorFetchingData from "../components/utils/ErrorFetchingData";
+import MyHelmet from "../components/shared/MyHelmet";
 
 const SocialPostPage = () => {
     const { postId } = useParams();
@@ -17,6 +18,7 @@ const SocialPostPage = () => {
 
     return (
         <Box>
+            <MyHelmet titled="Post" />
             <FeedPost post={data.post} postIndex={0} modalView />
 
             <Typography

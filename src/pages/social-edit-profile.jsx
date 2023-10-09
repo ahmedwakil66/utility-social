@@ -2,6 +2,7 @@ import { Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText } fro
 import { useState } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import HiddenDown from "../components/utils/HiddenDown";
+import MyHelmet from "../components/shared/MyHelmet";
 
 const EditProfilePage = () => {
     const navigate = useNavigate();
@@ -21,6 +22,7 @@ const EditProfilePage = () => {
             borderRadius: '2px',
             minHeight: '50vh'
         }}>
+            <MyHelmet titled="Account" />
             {/* Parament drawer: Only for larger screen */}
             <HiddenDown breakpoint="md">
                 <Drawer

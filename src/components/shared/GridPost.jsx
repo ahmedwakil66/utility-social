@@ -18,7 +18,7 @@ const GridPost = ({ post }) => {
         setOpen(false);
     }
 
-    if(!post) return null;
+    if(!post) return null; 
 
     return (
         <>
@@ -34,7 +34,7 @@ const GridPost = ({ post }) => {
                 onMouseEnter={() => setShowOverlay(true)}
                 onMouseLeave={() => setShowOverlay(false)}
             >
-                <img src={post.media[0].url} alt="" width="100%" />
+                <img src={post.media[0]?.url} alt="" width="100%" />
                 {showOverlay && <div
                     onClick={() => setOpen(true)}
                     style={{
@@ -57,7 +57,7 @@ const GridPost = ({ post }) => {
                         fontSize={18}
                         gap={.8}
                     >
-                        <span>{post.likesAggregate.count}</span>
+                        <span>{post.likesAggregate?.count}</span>
                         <FavoriteIcon />
                     </Typography>
 
@@ -68,7 +68,7 @@ const GridPost = ({ post }) => {
                         fontSize={18}
                         gap={.8}
                     >
-                        <span>{post.commentsAggregate.count}</span>
+                        <span>{post.commentsAggregate?.count}</span>
                         <ModeCommentIcon />
                     </Typography>
                 </div>}

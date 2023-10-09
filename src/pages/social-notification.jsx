@@ -9,6 +9,7 @@ import LoadingSpinner from "../components/utils/LoadingSpinner";
 import { RESET_NOTIFICATION } from "../mutations/posts";
 import { useEffect } from "react";
 import ErrorFetchingData from "../components/utils/ErrorFetchingData";
+import MyHelmet from "../components/shared/MyHelmet";
 
 const NotificationPage = () => {
     const { _id, refetch } = useUser();
@@ -28,6 +29,7 @@ const NotificationPage = () => {
 
     return (
         <Box>
+            <MyHelmet titled="Notification" />
             <Typography
                 color="textSecondary"
                 variant="subtitle2"

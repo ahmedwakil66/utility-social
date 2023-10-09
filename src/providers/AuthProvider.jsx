@@ -123,6 +123,7 @@ const ServerCheckingMessage = () => {
         >
             <Alert severity="info">Checking server status. This may take a while!</Alert>
             <Typography color="" fontSize={14}>Please Reload, if this message persists for too long.</Typography>
+            <Typography color="" fontSize={14}>Or, <a href="https://api-utility-social.onrender.com/" target="_blank" rel="noreferrer">activate</a> the server manually.</Typography>
         </Box>
     )
 }

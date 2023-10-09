@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ADD_REPORT } from "../mutations/reports";
 import useUser from "../hooks/useUser";
 import useSnack from "../hooks/useSnack";
+import MyHelmet from "../components/shared/MyHelmet";
 
 const ReportAProblemPage = () => {
     const { _id } = useUser();
@@ -39,6 +40,7 @@ const ReportAProblemPage = () => {
             maxWidth={500}
             mx="auto"
         >
+            <MyHelmet titled={"Report a problem"} />
             <Box>
                 <Typography variant="subtitle1" color="GrayText">Report a problem</Typography>
                 <Typography variant="body1" color="GrayText" fontSize={12}>
